@@ -1,0 +1,33 @@
+body{min-height:200vh;
+    font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;
+}
+
+/*--------------------------*/
+/*Landing Page - Nav Bar*/
+
+.navbar-fixed-top.scrolled {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 1000ms linear;
+  }
+  
+  .navbar-nav.scrolled{
+    background-color: rgb(0, 0, 0);
+    transition: background-color 100000ms linear;
+  }
+  
+  .embed-responsive .card-img-top {
+    width: 100%;
+    object-fit: contain;
+  }
+
+.intro figcaption
+{
+    animation: blinker 3s linear infinite;
+    color: orange;
+}
+  
+  @keyframes blinker {
+    25% {
+      opacity: 0;
+    }
+}

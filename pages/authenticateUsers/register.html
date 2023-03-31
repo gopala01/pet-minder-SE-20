@@ -8,23 +8,28 @@
         <title>Register form</title>
     </head>
     
-    <body>
-        <div class="container mt-5">
-            <h1 class="text-center mb-4">Register</h1>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="background:#349D90";>
+        <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
+            <h1 class="text-center mb-4"><b>Register</b></h1>
             <form onsubmit="signup(event)">
                 <div id="form_content_inner_container" class="mb-3">
-                    <label for="firstName" class="form-label">First Name</label>
+                    <label for="firstName" class="form-label"><h2>First Name</h2></label>
                     <input type="text" class="form-control" id="firstName" placeholder="First Name">
                     
-                    <label for="lastName" class="form-label mt-3">Last Name</label>
+                    <br>
+
+                    <label for="lastName" class="form-label"><h2>Last Name</h2></label>
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name">
 
-                    <label for="email" class="form-label mt-3">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                    <br>
+                    <label for="email" class="form-label mt-3"><h2>Email</h2></label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
 
-                <label for="password" class="form-label mt-3">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
+                    <br>
+
+                    <label for="password" class="form-label mt-3"><h2>Password</h2></label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
             <div id="form_button_container" class="text-center">
                 <button id="signupinp" type="submit" class="btn btn-primary" value="Register">Register</button>
             </div>

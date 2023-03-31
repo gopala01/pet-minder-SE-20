@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <title>Register form</title>
+    </head>
+    
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="background:#349D90";>
+        <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
+            <h1 class="text-center mb-4"><b>Login</b></h1>
+            <form onsubmit="signup(event)">
+                <div id="form_content_inner_container" class="mb-3">
+                    <label for="email" class="form-label mt-3"><h2>Email</h2></label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+
+                    <br>
+
+                    <label for="password" class="form-label mt-3"><h2>Password</h2></label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+            <div id="form_button_container" class="text-center">
+                <button id="logininup" type="submit" class="btn btn-primary" value="Register">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script> 
+
+<script src="signUpUsers.js" type="module"></script>
+</html>

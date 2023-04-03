@@ -1,6 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
+import { initializeApp } from "../../node_modules/firebase/app"
+import { getAuth, createUserWithEmailAndPassword } from "../../node_modules/firebase/auth"
+import { getDatabase, ref, set } from "../../node_modules/firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

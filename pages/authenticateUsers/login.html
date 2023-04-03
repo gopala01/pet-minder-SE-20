@@ -52,7 +52,7 @@
         
         <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
             <h1 class="text-center mb-4"><b>Login</b></h1>
-            <form onsubmit="signup(event)">
+            <form onsubmit="signin(event)">
                 <div id="form_content_inner_container" class="mb-3">
                     <label for="email" class="form-label mt-3"><h2>Email</h2></label>
                     <input type="email" class="form-control" id="email" placeholder="Email">
@@ -85,17 +85,30 @@
     const app = initializeApp(firebaseConfig);
 
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        console.log("Logged in")
-        // ...
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-    });
+
+    function signin(event){
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        
+        signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            // Signed in 
+            
+            console.log("Logged in")
+            window.location.href = "../homepage.html";
+
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+
+    }
+
+    document.getElementById("logininup").addEventListener("click", signin);
+
 
 </script>
 </html>

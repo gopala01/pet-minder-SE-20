@@ -44,6 +44,8 @@
     
         </header>
 
+        <br>
+
         <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
             <h1 class="text-center mb-4"><b>Register</b></h1>
             <form onsubmit="signup(event)">
@@ -57,12 +59,21 @@
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name">
 
                     <br>
+
+                    <label for="options">Choose a option:</label>
+                    <br>
+                    <select name="option" id="option">
+                        <option value="client">Client</option>
+                        <option value="minder">Minder</option>
+                    </select>
+
+                    <br>
                     <label for="email" class="form-label mt-3"><h2>Email</h2></label>
                     <input type="email" class="form-control" id="email" placeholder="Email">
 
                     <br>
-                    <label for="password" class="form-label mt-3"><h2>Password</h2></label>
-                    <input type="text" class="form-control" id="password" placeholder="Password">
+                    <label for="text" class="form-label mt-3"><h2>Phone Number</h2></label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
                     <br>
 
                     <label for="password" class="form-label mt-3"><h2>Password</h2></label>
@@ -76,5 +87,4 @@
 </body>
 
 <script src="signUpUsers.js" type="module"></script>
-
 </html>

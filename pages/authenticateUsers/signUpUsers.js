@@ -31,7 +31,6 @@ var regPhone = /^(?:(?:\+|00)44\s?[1-9]{1}\d{1,4}\s?\d{1,6}|0\d{2,4}\s?\d{1,6})$
 var regPass = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()-+])[A-Za-z\d!@#$%^&*()-+]{6,}$/;
 
 var errorMessages = [];
-
 if (!regName.test(firstName)) {
     errorMessages.push("Invalid first name given.");
 }
@@ -41,7 +40,6 @@ if (!regName.test(lastName)) {
 if(!regPhone.test(phoneNumber)){
     errorMessages.push("Invalid UK phone number given.");
 }
-
 
 if (!regPass.test(password)) {
     errorMessages.push("Invalid password. The password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and have a minimum length of 6 characters.");

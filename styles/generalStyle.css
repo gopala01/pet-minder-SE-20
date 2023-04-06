@@ -31,8 +31,3 @@ body{min-height:200vh;
       opacity: 0;
     }
 }
-
-footer{
-  position: fixed;
-  bottom: 0;
-}

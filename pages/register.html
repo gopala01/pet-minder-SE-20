@@ -176,6 +176,7 @@
 
   function signup(event) {
   event.preventDefault();
+
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
   var o = document.getElementById("option");
@@ -183,54 +184,31 @@
   var email = document.getElementById("email").value;
   var phoneNumber = document.getElementById("phoneNumber").value;
   var password = document.getElementById("password").value;
-  var regName = /^[A-Z][a-z]*$/;
-  var regPhone = /^(?:(?:\+|00)44\s?[1-9]{1}\d{1,4}\s?\d{1,6}|0\d{2,4}\s?\d{1,6})$/;
-  var regPass = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()-+])[A-Za-z\d!@#$%^&*()-+]{6,}$/;
 
-  var errorMessages = [];
-  var pass = false;
+  // Call the validateInputs function
+  const validationResult = validateInputs(firstName, lastName, phoneNumber, password);
+  const { pass, errorMessages } = validationResult;
 
-  while( pass == false){
-    if (!regName.test(firstName)) {
-      errorMessages.push("Invalid first name given.");
-    }
-    if (!regName.test(lastName)) {
-        errorMessages.push("Invalid last name given.");
-    }
-    if(!regPhone.test(phoneNumber)){
-        errorMessages.push("Invalid UK phone number given.");
-    }
-
-    if (!regPass.test(password)) {
-        errorMessages.push("Invalid password. The password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and have a minimum length of 6 characters.");
-    }
-
-    if(errorMessages.length > 0){
-        alert(errorMessages.join("\n"));
-        errorMessages = []
-        pass = true;
-    }
-    else{
-      pass = true;
-    }
-  }
-
-
-  createUserWithEmailAndPassword(auth, email, password)
+  // Show error messages if validation fails
+  if (!pass) {
+    alert(errorMessages.join("\n"));
+  } else {
+    // If validation passes, proceed with creating the user
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-      const user = userCredential.user;
+        const user = userCredential.user;
 
-      // Set user data in the database
-      set(ref(db, `users/${user.uid}`), {
-          firstName : firstName,
-          lastName : lastName,
-          phoneNumber : phoneNumber,
-          chosenOption : chosenOption,
+        // Set user data in the database
+        set(ref(db, `users/${user.uid}`), {
+          firstName: firstName,
+          lastName: lastName,
+          phoneNumber: phoneNumber,
+          chosenOption: chosenOption,
           email: email,
-          uid: user.uid
-      });
-      window.location.href = 'login.html'
-      // Redirect to a success page
+          uid: user.uid,
+        });
+        window.location.href = "login.html";
+        // Redirect to a success page
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -238,7 +216,35 @@
         alert(errorMessage);
       });
   }
+}
 
+function validateInputs(firstName, lastName, phoneNumber, password) {
+  var regName = /^[A-Z][a-z]*$/;
+  var regPhone = /^(?:(?:\+|00)44\s?[1-9]{1}\d{1,4}\s?\d{1,6}|0\d{2,4}\s?\d{1,6})$/;
+  var regPass = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()-+])[A-Za-z\d!@#$%^&*()-+]{6,}$/;
+
+  var errorMessages = [];
+  var pass = true;
+
+  if (!regName.test(firstName)) {
+    errorMessages.push("Invalid first name given.");
+    pass = false;
+  }
+  if (!regName.test(lastName)) {
+    errorMessages.push("Invalid last name given.");
+    pass = false;
+  }
+  if (!regPhone.test(phoneNumber)) {
+    errorMessages.push("Invalid UK phone number given.");
+    pass = false;
+  }
+  if (!regPass.test(password)) {
+    errorMessages.push("Invalid password. The password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and have a minimum length of 6 characters.");
+    pass = false;
+  }
+
+  return { pass, errorMessages };
+}
   document.getElementById("signupinp").addEventListener("click", signup);
 </script>
 

@@ -43,7 +43,7 @@ async function requestPhoneNumber(userId) {
 async function getPhoneNumber(userId) {
   const userRef = ref(db, `users/${userId}`);
   const snapshot = await get(userRef);
-  console.log("User data:", userData);
+  
 
   const userData = snapshot.val();
   if (userData.phoneNumberVisibility) {

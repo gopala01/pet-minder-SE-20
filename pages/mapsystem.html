@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="../styles/generalStyle.css" rel="stylesheet">
+        <title>Dog Walking</title>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" defer></script>
+    </head>
+
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="background:#349D90";>
+
+        <!-- nav bar-->
+        <header>
+
+            <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-light navbar-fixed-top navbar-glass-shadow" data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-image: none; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">
+
+                <div class="container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder;">
+
+                    <a class="navbar-brand dark__text-white" href="homepage.html" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font-size:xx-large; color: white;">Pet Minder 20</a>
+
+                    <button class="navbar-toggler" style="border-color: #349D90; background: white;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon navbar-light"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#information" style="color: #ffffff; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="authenticateUsers/login.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link" href="authenticateUsers/register.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Register</a>
+                        </li>
+
+                        </ul>
+
+                </div>
+
+            </nav>
+            
+        </header>
+        <!--nav bar-->
+
+        <!--image and form-->
+        <div class="main-container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; color:rgb(120, 108, 108); margin-top: 80px;align-items: center;justify-content: center;width:100%;height:700px;background-image: url('../pictures/frontPage/dog1.jpg');background-repeat:no-repeat;background-size: 100%;">
+            
+            <div style="text-align: center;height:100px;justify-content: center;font-size:2.5em;padding-top: 100px;color:black;">
+
+                <p>Find an experienced pet minder near your location</p>
+
+            </div>
+
+            <div class="form-container" style="display:flex;justify-content: center;margin-top: 10%;"> 
+
+                <form class="row g-4 align-items-center" style="background-color: #ffffff;padding-bottom: 30px;border-radius: 8px;">
+
+                    <div class="col-md-6">
+                      <label for="inputService" class="form-label">I'm looking for</label>
+                      <select class="form-select" id="inputService">
+                        <option>
+                            Dog Walking
+                        </option>
+                        <option>
+                            Dog Boarding
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="inputLocation" class="form-label">Location</label>
+                      <input type="location" class="form-control" id="inputLocation">
+                    </div>
+
+                    <div class="col-6">
+                      <label for="inputDate" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="inputDate">
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <button id="formSubmitButton" type="submit" class="btn btn-outline-secondary" style="width:100%;margin-top: 30px;"><a href="./result.html" style="color:black;text-decoration: none;height:100%;width:100%;display: block;">Search</a></button>
+                    </div>
+
+                  </form>
+            
+            </div>
+
+        </div>
+        <!--image and form-->
+
+        <div style="display:block;text-align: center;">
+            <h2>General Processes</h2>
+        </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../javascript/navBar.js"></script>
+    </body>
+
+</html>

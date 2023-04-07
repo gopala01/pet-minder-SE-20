@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="../styles/generalStyle.css" rel="stylesheet">
+        <title>Dog Walking</title>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" defer></script>
+        <style>
+            li{
+                list-style:none;
+            }
+        </style>
+    </head>
+
+
+
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="background:#349D90";>
+
+        <!-- nav bar-->
+        <header>
+
+            <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-light navbar-fixed-top navbar-glass-shadow" data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-image: none; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">
+
+                <div class="container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder;">
+
+                    <a class="navbar-brand dark__text-white" href="homepage.html" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font-size:xx-large; color: white;">Pet Minder 20</a>
+
+                    <button class="navbar-toggler" style="border-color: #349D90; background: white;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon navbar-light"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#information" style="color: #ffffff; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="authenticateUsers/login.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link" href="authenticateUsers/register.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Register</a>
+                        </li>
+
+                        </ul>
+
+                </div>
+
+            </nav>
+            
+        </header>
+        <!--nav bar-->
+
+        
+        <div style="margin-top: 80px;">
+
+            <!--search bar-->
+            <div class="searchbar" style="background-color: #ffffff;height:100px;padding: 10px 40px 20px 40px;">
+
+                <div class="row align-items-end">
+
+                    <div class="col-md-2">
+                        <label for="inputLocation" class="form-label">Location</label>
+                        <input type="location" class="form-control" id="inputLocation">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="inputService" class="form-label">I'm looking for</label>
+                        <select class="form-select" id="inputService">
+                            <option>
+                                Dog Walking
+                            </option>
+                            <option>
+                                Dog Boarding
+                            </option>
+                        </select>
+                    </div>  
+
+                    <div class="col-md-2">
+                        <label for="inputDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="inputDate">
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Pet</label>
+                        <select class="form-select" id="inputPet">
+                            <option>
+                                Pet 1
+                            </option>
+                            <option>
+                                Pet 2
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Sort by</label>
+                        <select class="form-select" id="inputSort">
+                            <option>
+                                Price High to Low
+                            </option>
+                            <option>
+                                Price Low to High
+                            </option>
+                            <option>
+                                Grade High to Low
+                            </option>
+                            <option>
+                                Grade High to Low
+                            </option>
+                            <option>
+                                Distance
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--search bar-->
+
+
+            <!--pet minder list and map-->
+            <div class="row align-items-start" style="margin-top:10px;">
+
+                <div id="minder-list" class="col-md-6" style="padding:0% 0% 0% 0%;">
+                    <nav>
+                        <li class="nav-item" style="background-color: #ffffff;width: 100%;padding: 10px 0px 20px 10px;margin-right: 50px;margin-bottom: 10px;">
+                            <div style="display:inline-block;width: 100px;">
+                                <img src="../pictures/frontPage/user.png" style="width:100px;height:100px;">
+                            </div>
+                            <div style="display:inline-block;padding:0% 0% 0% 0%;width:80%;">
+                                <div ><h2>Pet Minder 1</h2></div>
+                                <div ><p>20GBP/time &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 5.0/5</p></div>
+                                <div ><p>Descriptions</p></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item" style="background-color: #ffffff;width: 100%;padding: 10px 0px 20px 10px;margin-right: 10px;margin-bottom: 10px;">
+                            <div style="display:inline-block;width: 100px;">
+                                <img src="../pictures/frontPage/user.png" style="width:100px;height:100px;">
+                            </div>
+                            <div style="display:inline-block;padding:0% 0% 0% 0%;width:80%;">
+                                <div ><h2>Pet Minder 2</h2></div>
+                                <div ><p>20GBP/time &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4.4/5</p></div>
+                                <div ><p>Descriptions</p></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item" style="background-color: #ffffff;width: 100%;padding: 10px 0px 20px 10px;margin-right: 10px;margin-bottom: 10px;">
+                            <div style="display:inline-block;width: 100px;">
+                                <img src="../pictures/frontPage/user.png" style="width:100px;height:100px;">
+                            </div>
+                            <div style="display:inline-block;padding:0% 0% 0% 0%;width:80%;">
+                                <div ><h2>Pet Minder 3</h2></div>
+                                <div ><p>20GBP/time &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4.5/5</p></div>
+                                <div ><p>Descriptions</p></div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item" style="background-color: #ffffff;width: 100%;padding: 10px 0px 20px 10px;margin-right: 10px;margin-bottom: 10px;">
+                            <div style="display:inline-block;width: 100px;">
+                                <img src="../pictures/frontPage/user.png" style="width:100px;height:100px;">
+                            </div>
+                            <div style="display:inline-block;padding:0% 0% 0% 0%;width:80%;">   
+                                <div ><h2>Pet Minder 4</h2></div>
+                                <div ><p>20GBP/time &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3.2/5</p></div>
+                                <div ><p>Descriptions</p></div>
+                            </div>
+                        </li>
+                    </nav>
+                </div>
+
+                <div id="map-container" class="col-md-6 align-items-center" style="padding:0% 0% 0% 0%;height: 700px;padding-left: 10px;">
+                    <iframe
+                        width="90%"
+                        height="100%"
+                        style="border:0"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADIJdFWb01y-aUFYU6YeMk996Xszo8fsI&q=London">
+                    </iframe>
+                </div>
+
+            </div>
+            <!--pet minder list and map-->
+
+        </div>
+        
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../javascript/navBar.js"></script>
+    </body>
+</html>

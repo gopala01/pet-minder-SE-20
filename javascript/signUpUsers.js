@@ -19,36 +19,40 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase(app);
 
-async function getUserIdByEmail(targetEmail) { //Nader Added
-    const usersRef = ref(db, 'users');
-    const userQuery = query(usersRef, orderByChild('email'), equalTo(targetEmail));
-    const snapshot = await get(userQuery);
-  
-    if (snapshot.exists()) {
+async function getUserIdByEmail(targetEmail) {
+  const usersRef = ref(db, 'users');
+  const userQuery = query(usersRef, orderByChild('email'), equalTo(targetEmail));
+  const snapshot = await get(userQuery);
+
+  if (snapshot.exists()) {
       const userData = snapshot.val();
       const userId = Object.keys(userData)[0];
       return userId;
-    } else {
+  } else {
       throw new Error('User not found');
-    }
   }
+}
 
-  async function requestPhoneNumber(userId) { //Nader Added
-    const userRef = ref(db, `users/${userId}`);
-    await set(userRef.child("phoneNumberVisibility"), true);
-  }
+
+async function requestPhoneNumber(userId) {
+  const userRef = ref(db, `users/${userId}`);
+  await set(ref(db, `users/${userId}/phoneNumberVisibility`), true);
+}
+
   
-  async function getPhoneNumber(userId) {
-    const userRef = ref(db, `users/${userId}`);
-    const snapshot = await get(userRef);
-  
-    const userData = snapshot.val();
-    if (userData.phoneNumberVisibility) {
-      return userData.phoneNumber;
-    } else {
-      throw new Error("Phone number not visible");
-    }
+async function getPhoneNumber(userId) {
+  const userRef = ref(db, `users/${userId}`);
+  const snapshot = await get(userRef);
+  console.log("User data:", userData);
+
+  const userData = snapshot.val();
+  if (userData.phoneNumberVisibility) {
+    return userData.phoneNumber;
+  } else {
+    throw new Error("Phone number not visible");
   }
+}
+
 
 
 function signup(event) {

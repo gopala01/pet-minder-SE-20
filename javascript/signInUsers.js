@@ -25,9 +25,8 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
         .then(() => {
             // Signed in 
             
+            window.location.href = "userprofiles/pet-profiles.html";
             console.log("Logged in")
-            window.location.href = "../homepage.html";
-
             // ...
         })
         .catch((error) => {

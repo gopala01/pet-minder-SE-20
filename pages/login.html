@@ -49,87 +49,35 @@
 
         </nav>
         
-    </header>     
-    <br>
-      <br>
-        
-      <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
-          <h1 class="text-center mb-4"><b>Login</b></h1>
-          <form onsubmit="signin(event)">
-            <div id="form_content_inner_container" class="mb-3">
-              <label for="email" class="form-label mt-3"><h2>Email</h2></label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
+    </header>
+    <div class="main-container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; color:#349D90;">
+      <section class="space-lg overflow-hidden" style="background:#349D90;">  
+        <br>
+          <br>
+            
+          <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
+              <h1 class="text-center mb-4"><b>Login</b></h1>
+              <form onsubmit="signin(event)">
+                <div id="form_content_inner_container" class="mb-3">
+                  <label for="email" class="form-label mt-3"><h2>Email</h2></label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
 
-                    <br>
+                        <br>
 
-                    <label for="password" class="form-label mt-3"><h2>Password</h2></label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                        <label for="password" class="form-label mt-3"><h2>Password</h2></label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                <div id="form_button_container" class="text-center">
+                    <button id="logininup" type="submit" class="btn btn-primary" value="Login">Login</button>
+                    <button id="forgotPassword" type="submit" class="btn btn-primary" value="Forgot Password">Forgot Password</button>
                 </div>
-            <div id="form_button_container" class="text-center">
-                <button id="logininup" type="submit" class="btn btn-primary" value="Login">Login</button>
-                <button id="forgotPassword" type="submit" class="btn btn-primary" value="Forgot Password">Forgot Password</button>
-            </div>
-        </form>
+            </form>
+          </div>
+      </section>
     </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="../javascript/navBar.js"></script>
   <script src="../javascript/signInUsers.js" type="module"></script>
 </body>
-
-
-<footer class="text-center text-lg-start bg-white text-muted">
-  <!-- Section: Links  -->
-  <section class="bg-black">
-    <div class="container text-center text-md-start mt-5" style="padding-top:2em;">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>Pet Minder 20
-          </h6>
-          <p>
-              10% done lads lets get this done quickly
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Links
-          </h6>
-          <p>
-            <a href="" class="text-reset">login page</a>
-          </p>
-          <p>
-              <a href="#top" class="text-reset">Back to top</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-  
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            fakeemail@group20.com
-          </p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-
-  <div class="text-center p-4 bg-dark">
-      © Group 20
-  </div>
-  <!-- Section: Links  -->
-</footer>
-
 </html>

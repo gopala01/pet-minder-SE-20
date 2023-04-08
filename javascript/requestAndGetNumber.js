@@ -34,7 +34,7 @@ async function getUserIdByEmail(targetEmail) { //Nader Added
 
   async function requestPhoneNumber(userId) { //Nader Added
     const userRef = ref(db, `users/${userId}`);
-    await set(userRef.child("phoneNumberVisibility"), true);
+    await set(ref(db, `users/${userId}/phoneNumberVisibility`), true);
   }
   
   async function getPhoneNumber(userId) {

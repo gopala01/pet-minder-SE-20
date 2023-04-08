@@ -32,6 +32,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            alert(errorMessage);
         });
 
     }

@@ -50,30 +50,37 @@
         </nav>
         
     </header>
+    
     <div class="main-container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; color:#349D90;">
-      <section class="space-lg overflow-hidden" style="background:#349D90;">  
-        <br>
-          <br>
-            
-          <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
-              <h1 class="text-center mb-4"><b>Login</b></h1>
-              <form onsubmit="signin(event)">
-                <div id="form_content_inner_container" class="mb-3">
-                  <label for="email" class="form-label mt-3"><h2>Email</h2></label>
-                  <input type="email" class="form-control" id="email" placeholder="Email">
 
-                        <br>
+      <section id="top" class="py-0 overflow-hidden light" id="banner">
 
-                        <label for="password" class="form-label mt-3"><h2>Password</h2></label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
+        <div class="bg-image" style="background-image: url(../pictures/frontPage/Miragefull.jpg); height: 100vh;">
+    
+            <br>
+              <br>
+                
+              <div class="container mt-5"  style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder; color: white;">
+                  <h1 class="text-center mb-4"><b>Login</b></h1>
+                  <form onsubmit="signin(event)">
+                    <div id="form_content_inner_container" class="mb-3">
+                      <label for="email" class="form-label mt-3"><h2>Email</h2></label>
+                      <input type="email" class="form-control" id="email" placeholder="Email">
+
+                            <br>
+
+                            <label for="password" class="form-label mt-3"><h2>Password</h2></label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    <div id="form_button_container" class="text-center">
+                        <button id="logininup" type="submit" class="btn btn-primary" value="Login">Login</button>
+                        <button id="forgotPassword" type="submit" class="btn btn-primary" value="Forgot Password">Forgot Password</button>
                     </div>
-                <div id="form_button_container" class="text-center">
-                    <button id="logininup" type="submit" class="btn btn-primary" value="Login">Login</button>
-                    <button id="forgotPassword" type="submit" class="btn btn-primary" value="Forgot Password">Forgot Password</button>
-                </div>
-            </form>
-          </div>
+                </form>
+              </div>
+        </div>
       </section>
+    
     </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

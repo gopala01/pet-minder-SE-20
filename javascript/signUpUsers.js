@@ -63,6 +63,17 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
           uid: user.uid,
           phoneNumberVisibility: false,
         })
+
+        var fullName = firstName + " " + lastName;
+        //set user data in profile database
+        set(ref(db, `profile/${user.uid}`), {
+          fullName: fullName,
+          chosenOption: chosenOption,
+          email: email,
+          bio: "",
+          uid: user.uid,
+        })
+
         .then(() => {
           
           console.log("Database details set");

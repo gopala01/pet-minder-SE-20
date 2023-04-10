@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js';
-    import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
     const firebaseConfig = {
     apiKey: "AIzaSyBHIHD0PDT5IPyomztjZXjGY3_AdTsIfj0",
@@ -28,8 +28,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
         signInWithEmailAndPassword(auth, email, password)
         .then(() => {
             // Signed in 
-            
-            window.location.href = "userprofiles/pet-profiles.html";
+            window.location.href = "loggedin.html";
             console.log("Logged in")
             // ...
         })

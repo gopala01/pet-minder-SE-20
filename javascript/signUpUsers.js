@@ -64,8 +64,8 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
           phoneNumberVisibility: false,
         })
         .then(() => {
+          
           console.log("Database details set");
-          window.location.href = "login.html";
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -83,6 +83,8 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
       });
   }
 }
+
+
 
 function validateInputs(firstName, lastName, phoneNumber, password) {
   var regName = /^[A-Z][a-z]*$/;

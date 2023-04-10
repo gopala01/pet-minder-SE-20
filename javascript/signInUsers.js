@@ -15,6 +15,10 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
 
     const auth = getAuth();
 
+    function navigateToForgotPassword(){
+        window.location.href= "forgotPassword.html";
+    }
+
 
     function signin(event){
         event.preventDefault();
@@ -38,3 +42,4 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
     }
 
     document.getElementById("logininup").addEventListener("click", signin);
+    document.getElementById("forgotPasswordUp").addEventListener("click", navigateToForgotPassword);

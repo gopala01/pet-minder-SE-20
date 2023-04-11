@@ -125,4 +125,4 @@ function validateInputs(firstName, lastName, phoneNumber, password) {
 
   return { pass, errorMessages };
 }
-document.querySelector("form").addEventListener("submit", signup);
+document.getElementById("signupinp").addEventListener("submit", signup);

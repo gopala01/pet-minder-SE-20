@@ -31,38 +31,44 @@
         <!-- nav bar-->
         <header>
 
-            <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-fixed-top navbar-glass-shadow" data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-color: #349D90; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;color: black;">
-
+            <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-light navbar-fixed-top navbar-glass-shadow" data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-image: none; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">
+    
                 <div class="container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder;">
-
+    
                     <a class="navbar-brand dark__text-white" href="homepage.html" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font-size:xx-large; color: white;">Pet Minder 20</a>
-
+    
                     <button class="navbar-toggler" style="border-color: #349D90; background: white;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon navbar-light"></span>
                     </button>
-
+    
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
+    
                         <ul class="navbar-nav ms-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="homepage.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">Home</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#information" style="color: #ffffff; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Information</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Login</a>
-                            </li>
-
-                            <li class="nav-item">
-                            <a class="nav-link" href="register.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Register</a>
-                        </li>
-
+                          <li class="nav-item mx-2">
+                            <a class="nav-link" id="homepage" href="postHomePage.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Home</a>
+                          </li>
+    
+    
+                          <li class="nav-item mx-2">
+                            <a class="nav-link" href="userprofiles/pet-profiles.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >User Profiles</a>
+                          </li>
+    
+                          <li class="nav-item mx-2">
+                            <a class="nav-link" id="contact" href="contact.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Contact Other Users</a>
+                          </li>
+    
+                          <li class="nav-item mx-2">
+                            <a class="nav-link" id="profile" href="profile.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Profile</a>
+                          </li>
+    
+                          <li class="nav-item mx-2">
+                            <a class="nav-link" id="signOutUp" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Log out</a>
+                          </li>
+    
                         </ul>
-
+    
                 </div>
-
+    
             </nav>
             
         </header>
@@ -377,7 +383,9 @@
         
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../javascript/navBar.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../javascript/navBar.js"></script>
+        <script type = "module" src="../../javascript/sessions.js"></script>
+        <script src="../../javascript/signOut.js"></script>
     </body>
 </html>

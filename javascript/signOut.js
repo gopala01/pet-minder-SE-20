@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js';
-import { getAuth, signInWithEmailAndPassword, signOutUser } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBHIHD0PDT5IPyomztjZXjGY3_AdTsIfj0",
@@ -18,7 +18,7 @@ function signOutUser(){
     signOut(auth)
     .then(() => {
         alert("Sign-out successful.");
-        window.location.href = "homepage.html";
+        window.location.href = "../preSignIn/homepage.html";
       })
       .catch((error) => {
         const errorCode = error.code;

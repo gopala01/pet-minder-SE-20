@@ -29,3 +29,16 @@ onAuthStateChanged(auth, (user) => {
       // User is signed out, handle this case accordingly
     }
   });
+
+  export async function fetchIndividualItem(itemKey) {
+    const itemRef = firebase.database().ref(`profile/${itemKey}`);
+  
+    try {
+      const snapshot = await itemRef.once("value");
+      const data = snapshot.val();
+      console.log("Individual item data:", data);
+      return data;
+    } catch (error) {
+      console.error("Error fetching individual item:", error);
+    }
+  }

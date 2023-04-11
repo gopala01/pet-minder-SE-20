@@ -77,6 +77,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
         .then(() => {
           
           console.log("Database details set");
+          window.location.href = "login.html"
         })
         .catch((error) => {
           const errorCode = error.code;

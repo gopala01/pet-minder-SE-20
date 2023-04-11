@@ -1,5 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js';
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
 
     const firebaseConfig = {
     apiKey: "AIzaSyBHIHD0PDT5IPyomztjZXjGY3_AdTsIfj0",
@@ -26,19 +27,44 @@ import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "htt
         var password = document.getElementById("password").value;
         
         signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            // Signed in 
-            window.location.href = "loggedin.html";
-            console.log("Logged in")
+        .then((userCredential) => {
+            // Signed in
+
+            const user = userCredential.user;
+            const userId = user.uid;
+            const db = getDatabase();
+            const userRef = ref(db, `profile/${userId}`);
+
+            // Retrieve user data
+            onValue(userRef, (snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                
+                    // Save user data to local storage
+                    localStorage.setItem("fullName", userData.fullName);
+                    localStorage.setItem("chosenOption", userData.chosenOption);
+                    localStorage.setItem("email", userData.email);
+                
+                    // Navigate to the next page
+                    window.location.href = "../postSignIn/postHomePage.html";
+                    console.log("Logged in");
+                  } else {
+                    console.error("User profile data not found in the database.");
+                    // Handle the case when user profile data is not found, e.g., show an error message or sign the user out
+                  }
+                });
             // ...
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            alert(errorMessage);
-        });
 
-    }
+                console.error("Error Code:", errorCode, "Error Message:", errorMessage, "Full Error Object:", error);
+                alert(errorMessage);
+            });
+
+        }
+
 
     document.getElementById("logininup").addEventListener("click", signin);
     document.getElementById("forgotPasswordUp").addEventListener("click", navigateToForgotPassword);

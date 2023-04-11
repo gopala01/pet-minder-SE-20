@@ -5,9 +5,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-      <link rel="stylesheet" href="../styles/reset.css">
+      <link rel="stylesheet" href="../../styles/reset.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-      <link href="../styles/generalStyle.css" rel="stylesheet">
+      <link href="../../styles/generalStyle.css" rel="stylesheet">
       <title>Dog Walking</title>
   
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
@@ -33,12 +33,20 @@
 
                     <ul class="navbar-nav ms-auto">
                       <li class="nav-item mx-2">
-                        <a class="nav-link" href="userprofiles/pet-profiles.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >User Profiles</a>
+                        <a class="nav-link" id="homepage" href="postHomePage.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Home</a>
                       </li>
 
 
                       <li class="nav-item mx-2">
-                        <a class="nav-link" href="mapsystem.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Book Appointment</a>
+                        <a class="nav-link" href="userprofiles/pet-profiles.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >User Profiles</a>
+                      </li>
+
+                      <li class="nav-item mx-2">
+                        <a class="nav-link" id="mapsystem" href="mapsystem.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Book Appointment</a>
+                      </li>
+
+                      <li class="nav-item mx-2">
+                        <a class="nav-link" id="profile" href="profile.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Profile</a>
                       </li>
 
                       <li class="nav-item mx-2">
@@ -52,9 +60,10 @@
         </nav>
         
     </header>
+    <main class="main-section" id="header>
     <section id="top" class="py-0 overflow-hidden light" id="banner">
 
-      <div class="bg-image" style="background-image: url(../pictures/frontPage/Miragefull.jpg); height: 100vh;">
+      <div class="bg-image" style="background-image: url(../../pictures/frontPage/Miragefull.jpg); height: 100vh;">
 
           <br>
           <br>
@@ -73,10 +82,41 @@
             </div>
       </div>
     </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                  <h5>PET MINDER 20</h5>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                  <h5>LINKS</h5>
+                  <a href="#header">Back to top</a>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                  <h5>CONTACT</h5>
+                  <a href="mailto:example@gmail.com">mailto:example@gmail.com</a>
+              </div>
+          </div>
+      </div>
+      <div class="last-div">
+        <div class="container">
+            <p>© Group 20</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="../javascript/navBar.js"></script>
-<script src="../javascript/requestAndGetNumber.js" type="module"></script>
+<script src="../../javascript/navBar.js"></script>
+<script src="../../javascript/requestAndGetNumber.js" type="module"></script>
 
 </html>

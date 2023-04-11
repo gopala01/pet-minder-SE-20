@@ -19,7 +19,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebas
   const db = getDatabase(app);
 
 
-  function signup(event) {
+export function signup(event) {
   event.preventDefault();
 
   var firstName = document.getElementById("firstName").value;
@@ -125,4 +125,4 @@ function validateInputs(firstName, lastName, phoneNumber, password) {
 
   return { pass, errorMessages };
 }
-document.getElementById("signupinp").addEventListener("submit", signup);
+document.querySelector("form").addEventListener("submit", signup);

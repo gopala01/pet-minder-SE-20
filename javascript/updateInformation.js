@@ -63,7 +63,6 @@ export function updatePetInformation(event) {
                 pettype: petType,
                 petbreed: petBreed,
                 petage: petAge,
-                email: email,
                 petdescription: petDescription
             })
             .then(() => {

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="../../styles/generalStyle.css" rel="stylesheet">
+    <title>Dog Walking</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" defer></script>
+
+
+
+</head>
+    
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="background:#349D90";>
+
+        <header>
+
+            <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-light navbar-fixed-top navbar-glass-shadow" data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-image: none; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;">
+
+                <div class="container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font:bolder;">
+
+                    <a class="navbar-brand dark__text-white" href="homepage.html" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; font-size:xx-large; color: white;">Pet Minder 20</a>
+
+                    <button class="navbar-toggler" style="border-color: #349D90; background: white;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon navbar-light"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                        <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" id="homepage" href="postHomePage.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Home</a>
+                        </li>
+
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="userprofiles/pet-profiles.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >User Profiles</a>
+                        </li>
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" id="mapsystem" href="mapsystem.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Book Appointment</a>
+                        </li>
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" id="profile" href="profile.html" style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Profile</a>
+                        </li>
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" id="signOutUp" href="../preSignIn/homepage.html"style="color: white; font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif;" >Log out</a>
+                        </li>
+
+                        </ul>
+
+                </div>
+
+            </nav>
+            
+        </header>
+
+        <div class="main-container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; color:#349D90;">
+
+            <section class="space-lg overflow-hidden" style="background:#349D90;">
+
+                <div class="container" style="padding-bottom: 10vh; padding-top: 10vh;">
+    
+                    <h2 id="information" class="display-7 text-center" style="color: #ffffff; margin-bottom: 50px;">Pet Information</h2>
+                    
+
+                        <form id="petInformation">
+                            <div class="form-group">
+                            <label for="pet-name">Pet Name</label>
+                            <input type="text" class="form-control" id="pet-name" placeholder="Enter pet name" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="pet-type">Pet Type</label>
+                            <input type="text" class="form-control" id="pet-type" placeholder="Enter pet type" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="pet-breed">Pet Breed</label>
+                            <input type="text" class="form-control" id="pet-breed" placeholder="Enter pet breed" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="pet-age">Pet Age</label>
+                            <input type="text" class="form-control" id="pet-age" placeholder="Enter pet age" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="pet-description">Pet Description</label>
+                            <textarea class="form-control" id="pet-description" rows="3" placeholder="More information"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                        <h2 id="information" class="display-7 text-center" style="color: #ffffff; margin-bottom: 50px;">Address Information</h2>
+
+                        <form>
+                            <div class="form-group">
+                            <label for="address-line-1">Address Line 1</label>
+                            <input type="text" class="form-control" id="address-line-1" placeholder="Enter address line 1">
+                            </div>
+                            <div class="form-group">
+                            <label for="address-line-2">Address Line 2</label>
+                            <input type="text" class="form-control" id="address-line-2" placeholder="Enter address line 2">
+                            </div>
+                            <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter city">
+                            </div>
+                            <div class="form-group">
+                            <label for="zip-code">Post Code</label>
+                            <input type="text" class="form-control" id="zip-code" placeholder="Enter zip code">
+                            </div>
+                            <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter country">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                </div>
+            
+            </section>
+        
+        </div>
+
+
+
+    <script type="module" src="../../javascript/signOut.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../javascript/navBar.js"></script>
+    </body>
+    <script type="module">
+        import { updatePetInformation } from "../../javascript/updateInformation.js";
+  </script>
+</html>

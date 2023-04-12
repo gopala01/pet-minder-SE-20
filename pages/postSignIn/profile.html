@@ -65,112 +65,79 @@
     <br>
     <br>
 
-    <div class="main-wrapper">
-      <main class="main-section" id="header">
-        <div class="container">
-              <!-- Pet owner Profiles -->
-              <h1 class="p-head" id="pet">My Profile</h1>
-              <div class="row mt-5">
-                  <div class="col-lg-4 col-md-4 col-sm-12">
-                      <div class="card">
-                          <div class="card-img">
-                          <!-- <img src="../../../../images/user-2.png" class="card-img-top" alt="..."> -->
-                          </div>
-                          <div class="card-body">
-                              <h1 id="nameText" class="card-title text-center"></h1>
-                              <hr>
-                              <h5 id="emailText" class="card-title text-center"></h5>
-                              <hr>
-                              <h5 id="optionText" class="card-title text-center"></h5>
-                          </div>
-                      </div>
-                  </div>
+    <div class="main-container" style="font-family: 'Futura', Nunito, Intertype, Jost, Spartan, Trebuchet MS, Arial, sans-serif; color:#349D90;"></div>
+      <section class="space-lg overflow-hidden" style="background:#349D90;">
+        
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="p-head" id="pet">My Profile</h1>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-sm"><a href="updatePetInformation.html" style="color: white; text-decoration: none;">Update Information</a></button>
+            </div>
+            
+            <div class="col-3">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h1 id="nameText" class="card-title text-center"></h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" id="pet-name"></h5>
+                  <p class="card-text"><strong>Email:</strong> <span id="emailText"></span></p>
+                  <p class="card-text"><strong>User Type:</strong> <span id="optionText"></span></p>
+                  <p class="card-text"><strong>Address: </strong> <span id=""></span></p>
+                </div>
               </div>
-        </div>
-      </main>
+            </div>
 
+            <div class="col-7">
+              <div class="card h-100">
+                <div class="card-header">
+                  <h1> Pet Information </h1>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" id="pet-name"></h5>
+                  <p class="card-text"><strong>Pet Type:</strong> <span id="pet-type"></span></p>
+                  <p class="card-text"><strong>Pet Breed:</strong> <span id="pet-breed"></span></p>
+                  <p class="card-text"><strong>Pet Age:</strong> <span id="pet-age"></span></p>
+                  <p class="card-text"><strong>Pet Description:</strong> <span id="pet-description"></span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+      </section>
+    
     </div>
 
     
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="../../javascript/navBar.js"></script>
+  <!-- <script type="module" src="../../javascript/sessions.js"></script> -->
+  <script type="module" src="../../javascript/signOut.js"></script>
+  <script type="module" src="../../javascript/profileInfo.js"></script>
+  <script>
+    
+      document.addEventListener("DOMContentLoaded", function() {
+          const fullName = localStorage.getItem('fullName');
+          const email = localStorage.getItem('email');
+          const chosenOption = localStorage.getItem('chosenOption');
 
-    <footer class="text-center text-lg-start bg-white text-muted">
+          console.log(fullName);
+          console.log(chosenOption);
   
-      <!-- Section: Links  -->
-      <section class="bg-black">
-        <div class="container text-center text-md-start mt-5" style="padding-top:2em;">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3 text-secondary"></i>Pet Minder 20
-              </h6>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                Links
-              </h6>
-              <p>
-                <a href="login.html" class="text-reset">Login</a>
-              </p>
-              <p>
-                  <a href="#top" class="text-reset">Back to top</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-      
-    
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <i class="fas fa-envelope me-3 text-secondary"></i>
-                fakeemail@group20.com
-              </p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
-      </section>
+          // Update the "Welcome" text with the full name
+          const nameElement = document.getElementById('nameText');
+          nameElement.textContent = fullName;
+  
+          const optionElement = document.getElementById('optionText');
+          optionElement.textContent = chosenOption;
 
-      <div class="text-center p-4 bg-dark">
-          © Group 20
-      </div>
-      <!-- Section: Links  -->
-    </footer>
-    <!-- Footer -->
-    
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="../../javascript/navBar.js"></script>
-        <!-- <script type="module" src="../../javascript/sessions.js"></script> -->
-        <script type="module" src="../../javascript/signOut.js"></script>
-        <script>
-          
-            document.addEventListener("DOMContentLoaded", function() {
-                const fullName = localStorage.getItem('fullName');
-                const email = localStorage.getItem('email');
-                const chosenOption = localStorage.getItem('chosenOption');
-
-                console.log(fullName);
-                console.log(chosenOption);
-        
-                // Update the "Welcome" text with the full name
-                const nameElement = document.getElementById('nameText');
-                nameElement.textContent = fullName;
-        
-                const optionElement = document.getElementById('optionText');
-                optionElement.textContent = "User Type: " + chosenOption;
-
-                const emailElement = document.getElementById('emailText');
-                emailElement.textContent = "Email: " + email;
-            });
-        </script>
+          const emailElement = document.getElementById('emailText');
+          emailElement.textContent =email;
+      });
+  </script>
         
 </body>
 

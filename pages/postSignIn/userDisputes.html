@@ -70,34 +70,24 @@
 
                 <div class="container" style="padding-bottom: 10vh; padding-top: 10vh;">
     
-                    <h2 id="information" class="display-7 text-center" style="color: #ffffff; margin-bottom: 50px;">Pet Information</h2>
-                    
+                    <h2 id="information" class="display-7 text-center" style="color: #ffffff; margin-bottom: 50px;">Disputes</h2>
 
-                        <form id="petInformation">
-                            <div class="form-group">
-                            <label for="pet-name">Pet Name</label>
-                            <input type="text" class="form-control" id="pet-name" placeholder="Enter pet name" required>
-                            </div>
-                            <div class="form-group">
-                            <label for="pet-type">Pet Type</label>
-                            <input type="text" class="form-control" id="pet-type" placeholder="Enter pet type" required>
-                            </div>
-                            <div class="form-group">
-                            <label for="pet-breed">Pet Breed</label>
-                            <input type="text" class="form-control" id="pet-breed" placeholder="Enter pet breed" required>
-                            </div>
-                            <div class="form-group">
-                            <label for="pet-age">Pet Age</label>
-                            <input type="text" class="form-control" id="pet-age" placeholder="Enter pet age" required>
-                            </div>
-                            <div class="form-group">
-                            <label for="pet-description">Pet Description</label>
-                            <textarea class="form-control" id="pet-description" rows="3" placeholder="More information"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                        
-                </div>
+                    <form id="disputeEntry">
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-name">Title</label>
+                            <input type="text" class="form-control" id="disputeTitle" placeholder="Enter Title" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Body</label>
+                          <textarea class="form-control" id="disputeBody" rows="3" placeholder="Enter your problem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
             
             </section>
         
@@ -110,6 +100,6 @@
     <script src="../../javascript/navBar.js"></script>
     </body>
     <script type="module">
-        import { updatePetInformation } from "../../javascript/updateInformation.js";
+        import { submitDispute } from "../../javascript/disputes.js";
   </script>
 </html>
